@@ -1,4 +1,4 @@
-# Saved by TopBraid on Sat Mar 03 08:56:03 EST 2012
+# Saved by TopBraid on Sun Mar 18 20:17:02 EDT 2012
 # baseURI: http://health.data.gov/def/healthcare/
 # imports: http://reference.data.gov/def/govdata/
 # imports: http://www.w3.org/2006/vcard/ns
@@ -24,7 +24,7 @@ This data model is also typed as a drm:Taxonomy and drm:DataSchema, and therefor
       rdfs:label "Healthcare Conceptual Schema"^^xsd:string ;
       dc:contributor "U.S. Department of Health and Human Services"^^xsd:string , "Oak Ridge National Laboratories"^^xsd:string , "Centers for Medicare and Medicaid Services"^^xsd:string ;
       drm:acronym "HCS"^^xsd:string ;
-      drm:contains hcare:ERC , hcare:MedicarePharmacyService , hcare:MedicareInpatientProcedureService , hcare:Claim , hcare:PharmacyService , hcare:MedicaidOutpatientConsultingService , hcare:MedicaidLongTermCareService , hcare:MedicareInpatientDiagnosisClaim , hcare:Record , hcare:ProcedureCode , hcare:MedicaidRecordSet , hcare:ICD9-PC , hcare:MedicaidInpatientProcedureService , hcare:MedicareLongTermCareClaim , hcare:FHID , hcare:MedicareLongTermCareService , hcare:LongTermCareService , hcare:Supplier , hcare:Hospital , hcare:DiagnosisCode , hcare:Provider , hcare:ICD9-DC , hcare:Beneficiary , hcare:MedicareReport , hcare:MS-DRG , hcare:MedicaidInpatientDiagnosisClaim , hcare:InpatientDiagnosisService , hcare:MedicaidOutpatientConsultingClaim , hcare:MedicareRecord , hcare:MedicarePharmacyClaim , hcare:MedicareClaim , hcare:MedicaidRecord , hcare:NationalProvider , hcare:MedicareRecordSet , hcare:MedicaidClaim , hcare:MedicareOutpatientConsultingClaim , hcare:MedicaidInpatientDiagnosisService , hcare:MedicareInpatientProcedureClaim , hcare:MedicaidInpatientProcedureClaim , hcare:OutpatientConsultingService , hcare:MedicaidReport , hcare:InpatientProcedureService , hcare:MedicaidPharmacyClaim , hcare:InpatientService , hcare:MedicaidBeneficiary , hcare:Physician , hcare:Report , hcare:Service , hcare:MedicareProvider , hcare:MedicaidProvider , hcare:MedicareInpatientDiagnosisService , hcare:RecordSet , hcare:Gender , hcare:MedicareOutpatientConsultingService , hcare:MedicaidOutpatientClaim , hcare:MedicareBeneficiary , hcare:Code , hcare:MedicaidLongTermCareClaim , hcare:MedicaidPharmacyService ;
+      drm:contains hcare:ERC , hcare:MedicarePharmacyService , hcare:MedicareInpatientProcedureService , hcare:Claim , hcare:PharmacyService , hcare:MedicaidOutpatientConsultingService , hcare:MedicaidLongTermCareService , hcare:MedicareInpatientDiagnosisClaim , hcare:Record , hcare:ProcedureCode , hcare:MedicaidRecordSet , hcare:ICD9-PC , hcare:MedicaidInpatientProcedureService , hcare:MedicareLongTermCareClaim , hcare:FHID , hcare:MedicareLongTermCareService , hcare:LongTermCareService , hcare:Supplier , hcare:Hospital , hcare:DiagnosisCode , hcare:Provider , hcare:ICD9-DC , hcare:Beneficiary , hcare:MedicareReport , hcare:MS-DRG , hcare:MedicaidInpatientDiagnosisClaim , hcare:InpatientDiagnosisService , hcare:MedicaidOutpatientConsultingClaim , hcare:MedicareRecord , hcare:MedicarePharmacyClaim , hcare:MedicareClaim , hcare:MedicaidRecord , hcare:NationalProvider , hcare:MedicareRecordSet , hcare:MedicaidClaim , hcare:MedicaidInpatientDiagnosisService , hcare:MedicareOutpatientConsultingClaim , hcare:MedicareInpatientProcedureClaim , hcare:MedicaidInpatientProcedureClaim , hcare:OutpatientConsultingService , hcare:MedicaidReport , hcare:InpatientProcedureService , hcare:MedicaidPharmacyClaim , hcare:InpatientService , hcare:MedicaidBeneficiary , hcare:Physician , hcare:Service , hcare:Report , hcare:MedicareProvider , hcare:MedicareInpatientDiagnosisService , hcare:MedicaidProvider , hcare:RecordSet , hcare:Gender , hcare:MedicareOutpatientConsultingService , hcare:MedicaidOutpatientClaim , hcare:MedicareBeneficiary , hcare:Code , hcare:MedicaidLongTermCareClaim , hcare:MedicaidPharmacyService ;
       drm:defines hcare: ;
       drm:identifier "http://health.data.gov/def/healthcare/"^^xsd:string ;
       drm:name "Healthcare Conceptual Schema"^^xsd:string ;
@@ -33,7 +33,7 @@ This data model is also typed as a drm:Taxonomy and drm:DataSchema, and therefor
       owl:imports <http://reference.data.gov/def/govdata/> , drm: , <http://www.w3.org/2006/vcard/ns> , <http://health.data.gov/def/hospital/> .
 
 hcare:Beneficiary
-      rdf:type rdfs:Class , drm:Topic ;
+      rdf:type drm:Topic , rdfs:Class ;
       rdfs:comment """This is the definition of the rdfs:Class and drm:Topic hcare:Beneficiary in the Healthcare Vocabulary. 
 
 Look for rdfs:subClassOf to find 'list endpoints' that list Medicaid and Medicare Beneficiaries  where instances of these classes will be linked to Claims, Providers, etc. """^^xsd:string ;
@@ -45,7 +45,7 @@ Look for rdfs:subClassOf to find 'list endpoints' that list Medicaid and Medicar
       drm:participatesIn hcare:enrollsIn .
 
 hcare:Claim
-      rdf:type drm:Topic , rdfs:Class ;
+      rdf:type rdfs:Class , drm:Topic ;
       rdfs:comment """This is the definition of the rdfs:Class and drm:Topic hcare:Claim in the Healthcare Vocabulary. 
 
 Look for rdfs:subClassOf to find 'list endpoints' that list Medicaid and Medicare Claim(s)  where instances of these classes will be linked to Beneficiaries and Providers each Claim is entailed with. """^^xsd:string ;
@@ -57,7 +57,7 @@ Look for rdfs:subClassOf to find 'list endpoints' that list Medicaid and Medicar
       drm:participatesIn hcare:noRelationship .
 
 hcare:Code
-      rdf:type drm:Topic , rdfs:Class ;
+      rdf:type rdfs:Class , drm:Topic ;
       rdfs:comment """This is the definition of the rdfs:Class and drm:Topic hcare:Code in the Healthcare Vocabulary. 
 
 Look for rdfs:subClassOf to find 'list endpoints' that list ERC, ICD9 and MS-DRG subclasses, where instances of these classes will be linked to Beneficiaries, Providers and Claims that each Code is entailed with. """^^xsd:string ;
@@ -98,7 +98,7 @@ hcare:ERC
       drm:participatesIn hcare:noRelationship .
 
 hcare:Eligibility
-      rdf:type drm:Topic , rdfs:Class ;
+      rdf:type rdfs:Class , drm:Topic ;
       rdfs:comment "This is the definition of the rdfs:Class and drm:Topic hcare:Eligibility in the Healthcare Vocabulary. "^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "Eligibility"^^xsd:string ;
@@ -108,7 +108,7 @@ hcare:Eligibility
       drm:participatesIn hcare:noRelationship .
 
 hcare:FHID
-      rdf:type drm:Topic , rdfs:Class ;
+      rdf:type rdfs:Class , drm:Topic ;
       rdfs:comment "This is the definition of the rdfs:Class and drm:Topic hcare:FHID in the Healthcare Vocabulary. "^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "FHID"^^xsd:string ;
@@ -118,7 +118,7 @@ hcare:FHID
       drm:participatesIn hcare:noRelationship .
 
 hcare:Gender
-      rdf:type rdfs:Class , drm:Topic ;
+      rdf:type drm:Topic , rdfs:Class ;
       rdfs:comment "This is the definition of the rdfs:Class and drm:Topic hcare:Gender in the Healthcare Conceptual Schema. "^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "Gender"^^xsd:string ;
@@ -139,7 +139,7 @@ hcare:Hospital
       owl:equivalentClass <http://health.data.gov/def/hospital/Hospital> .
 
 hcare:ICD9-DC
-      rdf:type rdfs:Class , drm:Topic ;
+      rdf:type drm:Topic , rdfs:Class ;
       rdfs:comment "This is the rdfs:class and drm:Topic definition of the set of International Statistical Classification of Diseases and Related Health Problems Diagnosis Codes (ICD9-DC) in the Healthcare Vocabulary (data model) that is a rdfs:subClassOf hcare:DiagnosisCode."^^xsd:string ;
       rdfs:subClassOf hcare:DiagnosisCode ;
       drm:identifier "http://health.data.gov/def/healthcare/ICD9-DC"^^xsd:string ;
@@ -148,7 +148,7 @@ hcare:ICD9-DC
       drm:participatesIn hcare:noRelationship .
 
 hcare:ICD9-PC
-      rdf:type rdfs:Class , drm:Topic ;
+      rdf:type drm:Topic , rdfs:Class ;
       rdfs:comment "This is the rdfs:class and drm:Topic for the set of International Statistical Classification of Diseases and Related Health Problems Procedure Codes (ICD9-PC) in the codelist component vocabulary (data model)"^^xsd:string ;
       rdfs:subClassOf hcare:ProcedureCode .
 
@@ -197,7 +197,7 @@ hcare:LongTermCareService
       drm:participatesIn hcare:offers .
 
 hcare:MS-DRG
-      rdf:type rdfs:Class , drm:Topic ;
+      rdf:type drm:Topic , rdfs:Class ;
       rdfs:comment "Medicare Severity Diagnostic Related Group"^^xsd:string ;
       rdfs:label "MS-DRG"^^xsd:string ;
       rdfs:subClassOf hcare:Code ;
@@ -239,7 +239,7 @@ hcare:MedicaidInpatientDiagnosisClaim
       rdfs:isDefinedBy hcare: ;
       rdfs:label "Medicaid Inpatient Diagnosis Claim"^^xsd:string ;
       rdfs:subClassOf hcare:MedicaidClaim ;
-      drm:contains drm:name , hcare:amount , hcare:serviceBeginDate , hcare:diagnosisCode , <http://reference.data.gov/def/govdata/stateCode> , hcare:prescribingPhysician , hcare:adjudicationDate , hcare:medicaidProvider , hcare:serviceEndDate , hcare:medicaidBeneficiary ;
+      drm:contains drm:name , hcare:amount , hcare:serviceBeginDate , <http://reference.data.gov/def/govdata/stateCode> , hcare:diagnosisCode , hcare:prescribingPhysician , hcare:adjudicationDate , hcare:medicaidProvider , hcare:serviceEndDate , hcare:medicaidBeneficiary ;
       drm:identifier "http://health.data.gov/def/healthcare/MedicaidInpatientService"^^xsd:string ;
       drm:isElementOf hcare: ;
       drm:name "Medicaid Inpatient Diagnosis Claim"^^xsd:string ;
@@ -385,7 +385,7 @@ hcare:MedicaidRecord
       drm:participatesIn hcare:noRelationship .
 
 hcare:MedicaidRecordSet
-      rdf:type drm:Topic , rdfs:Class ;
+      rdf:type rdfs:Class , drm:Topic ;
       rdfs:comment "A hcare:MedicaidRecordSet that is rdf:type rdfs:Class and rdfs:subClassOf gd:Record"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "Medicaid RecordSet"^^xsd:string ;
@@ -395,7 +395,7 @@ hcare:MedicaidRecordSet
       drm:name "Medicaid RecordSet"^^xsd:string .
 
 hcare:MedicaidReport
-      rdf:type drm:Topic , rdfs:Class ;
+      rdf:type rdfs:Class , drm:Topic ;
       rdfs:label "Medicaid Report"^^xsd:string ;
       rdfs:subClassOf hcare:Report ;
       drm:identifier "http://health.data.gov/def/healthcare/MedicaidReport"^^xsd:string ;
@@ -494,12 +494,23 @@ hcare:MedicareLongTermCareService
       drm:name "Medicare Long Term Care Service"^^xsd:string ;
       drm:participatesIn hcare:offers .
 
+hcare:MedicareOutpatientClaim
+      rdf:type rdfs:Class , drm:Topic ;
+      rdfs:comment "A Medicare Outpatient Claim"^^xsd:string ;
+      rdfs:isDefinedBy hcare: ;
+      rdfs:label "Medicare Outpatient Claim"^^xsd:string ;
+      rdfs:subClassOf hcare:MedicareClaim ;
+      drm:identifier "http://health.data.gov/def/healthcare/MedicareOutpatientClaim"^^xsd:string ;
+      drm:isElementOf hcare: ;
+      drm:name "Medicare Outpatient Claim"^^xsd:string ;
+      drm:participatesIn hcare:noRelationship .
+
 hcare:MedicareOutpatientConsultingClaim
       rdf:type rdfs:Class , drm:Topic ;
       rdfs:comment "A Medicare Outpatient Consulting Claim"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
-      rdfs:label "Medicare Outpatient Consulting Service"^^xsd:string ;
-      rdfs:subClassOf hcare:MedicareClaim ;
+      rdfs:label "Medicare Outpatient Consulting Claim"^^xsd:string ;
+      rdfs:subClassOf hcare:MedicareOutpatientClaim ;
       drm:identifier "http://health.data.gov/def/healthcare/MedicareOutpatientConsultingClaim"^^xsd:string ;
       drm:isElementOf hcare: ;
       drm:name "Medicare Outpatient Consulting Claim"^^xsd:string ;
@@ -563,7 +574,7 @@ hcare:MedicareRecord
       drm:participatesIn hcare:noRelationship .
 
 hcare:MedicareRecordSet
-      rdf:type drm:Topic , rdfs:Class ;
+      rdf:type rdfs:Class , drm:Topic ;
       rdfs:comment "A hcare:MedicareRecordSet that is rdf:type rdfs:Class and rdfs:subClassOf gd:Record"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "Medicaid RecordSet"^^xsd:string ;
@@ -573,7 +584,7 @@ hcare:MedicareRecordSet
       drm:name "Medicare RecordSet"^^xsd:string .
 
 hcare:MedicareReport
-      rdf:type drm:Topic , rdfs:Class ;
+      rdf:type rdfs:Class , drm:Topic ;
       rdfs:label "Medicare Report"^^xsd:string ;
       rdfs:subClassOf hcare:Report ;
       drm:identifier "http://health.data.gov/def/healthcare/MedicareReport"^^xsd:string ;
@@ -636,7 +647,7 @@ hcare:ProcedureCode
       drm:participatesIn hcare:noRelationship .
 
 hcare:Provider
-      rdf:type drm:Topic , rdfs:Class ;
+      rdf:type rdfs:Class , drm:Topic ;
       rdfs:comment """This is the definition of the rdfs:Class and drm:Topic hcare:Provider in the Healthcare Vocabulary. 
 
 Look for rdfs:subClassOf to find 'list endpoints' that list Medicaid and Medicare Provider(s)  where instances of these classes will be linked to Beneficiaries and Claims each Provider is entailed with. """^^xsd:string ;
@@ -648,7 +659,7 @@ Look for rdfs:subClassOf to find 'list endpoints' that list Medicaid and Medicar
       drm:participatesIn hcare:enrolledIn .
 
 hcare:Record
-      rdf:type drm:Topic , rdfs:Class ;
+      rdf:type rdfs:Class , drm:Topic ;
       rdfs:comment "A hcare:Record that is rdf:type rdfs:Class and rdfs:subClassOf gd:Record"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "Healthcare Record"^^xsd:string ;
@@ -656,7 +667,7 @@ hcare:Record
       drm:name "Healthcare Record"^^xsd:string .
 
 hcare:RecordSet
-      rdf:type drm:Topic , rdfs:Class ;
+      rdf:type rdfs:Class , drm:Topic ;
       rdfs:comment "A hcare:RecordSet that is rdf:type rdfs:Class and rdfs:subClassOf gd:Record"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "Healthcare RecordSet"^^xsd:string ;
@@ -666,7 +677,7 @@ hcare:RecordSet
       drm:name "Healthcare RecordSet"^^xsd:string .
 
 hcare:Report
-      rdf:type drm:Topic , rdfs:Class ;
+      rdf:type rdfs:Class , drm:Topic ;
       rdfs:label "Healthcare Report"^^xsd:string ;
       rdfs:subClassOf <http://reference.data.gov/def/govdata/Report> ;
       drm:identifier "http://health.data.gov/def/healthcare/Report"^^xsd:string ;
@@ -696,7 +707,7 @@ hcare:Supplier
       drm:participatesIn hcare:noRelationship .
 
 hcare:adjudicationDate
-      rdf:type rdf:Property , drm:Attribute ;
+      rdf:type drm:Attribute , rdf:Property ;
       rdfs:comment "adjudication date"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "adjudication date"^^xsd:string ;
@@ -704,7 +715,7 @@ hcare:adjudicationDate
       drm:name "adjudication date"^^xsd:string .
 
 hcare:admissionDate
-      rdf:type rdf:Property , drm:Attribute ;
+      rdf:type drm:Attribute , rdf:Property ;
       rdfs:comment "admission date"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "admission date"^^xsd:string ;
@@ -712,7 +723,7 @@ hcare:admissionDate
       drm:name "admission date"^^xsd:string .
 
 hcare:amount
-      rdf:type rdf:Property , drm:Attribute ;
+      rdf:type drm:Attribute , rdf:Property ;
       rdfs:comment "amount"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "amount"^^xsd:string ;
@@ -720,7 +731,7 @@ hcare:amount
       drm:name "amount"^^xsd:string .
 
 hcare:beneficiary
-      rdf:type drm:Attribute , rdf:Property ;
+      rdf:type rdf:Property , drm:Attribute ;
       rdfs:comment "hcare:beneficiary is a drm:Attribute and rdf:Property that will link to an instance of a hcare:Claim URI or one of it's subclasses, such as hcare:MedicaidClaim or hcare:MedicareClaim (or one of their subclasses.)"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "healthcare beneficiary"^^xsd:string ;
@@ -728,7 +739,7 @@ hcare:beneficiary
       drm:name "healthcare beneficiary"^^xsd:string .
 
 hcare:beneficiaryCount
-      rdf:type rdf:Property , drm:Attribute ;
+      rdf:type drm:Attribute , rdf:Property ;
       rdfs:comment "This is the definition of the hcare:beneficiaryCount as a rdf:type rdf:Property and drm:Attribute that is drm:constrainedBy gd:integer which is a rdf:type xsd:integer. "^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "beneficiary count"^^xsd:string ;
@@ -737,7 +748,7 @@ hcare:beneficiaryCount
       drm:name "beneficiary count"^^xsd:string .
 
 hcare:chargedAmount
-      rdf:type rdf:Property , drm:Attribute ;
+      rdf:type drm:Attribute , rdf:Property ;
       rdfs:comment "charged amount"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "charged amount"^^xsd:string ;
@@ -746,13 +757,13 @@ hcare:chargedAmount
       drm:name "charged amount"^^xsd:string .
 
 hcare:claim
-      rdf:type drm:Attribute , rdf:Property ;
+      rdf:type rdf:Property , drm:Attribute ;
       rdfs:comment "hcare:claim is an rdf:Property that will link to an instance of a hcare:Claim URI or one of it's rdfs:subClassOf subclasses, such as mcaid:Claim or mcare:Claim (hcare:claim rdfs:range hcare:Claim , mcaid:Claim , mcare:Claim .)"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "claim"^^xsd:string .
 
 hcare:claimRecordCount
-      rdf:type rdf:Property , drm:Attribute ;
+      rdf:type drm:Attribute , rdf:Property ;
       rdfs:comment "claim record count"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "claim record count"^^xsd:string ;
@@ -761,13 +772,13 @@ hcare:claimRecordCount
       drm:name "claim record count"^^xsd:string .
 
 hcare:code
-      rdf:type drm:Attribute , rdf:Property ;
+      rdf:type rdf:Property , drm:Attribute ;
       rdfs:comment "hcare:code is a rdf:type rdf:Property and drm:Attribute"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "code"^^xsd:string .
 
 hcare:dateApplied
-      rdf:type rdf:Property , drm:Attribute ;
+      rdf:type drm:Attribute , rdf:Property ;
       rdfs:comment "date applied"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "date applied"^^xsd:string ;
@@ -775,7 +786,7 @@ hcare:dateApplied
       drm:name "date applied"^^xsd:string .
 
 hcare:dateSanctioned
-      rdf:type rdf:Property , drm:Attribute ;
+      rdf:type drm:Attribute , rdf:Property ;
       rdfs:comment "date sanctioned"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "date sanctioned"^^xsd:string ;
@@ -783,7 +794,7 @@ hcare:dateSanctioned
       drm:name "date sanctioned"^^xsd:string .
 
 hcare:diagnosisCode
-      rdf:type drm:Attribute , rdf:Property ;
+      rdf:type rdf:Property , drm:Attribute ;
       rdfs:comment "hcare:diagnosisCode is a rdf:type rdf:Property, drm:Attribute and rdfs:subPropertyOf hcare:code"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "diagnosis code"^^xsd:string ;
@@ -792,7 +803,7 @@ hcare:diagnosisCode
       drm:name "diagnosis code"^^xsd:string .
 
 hcare:enrolledIn
-      rdf:type rdf:Property , drm:Relationship ;
+      rdf:type drm:Relationship , rdf:Property ;
       rdfs:domain hcare:Beneficiary ;
       rdfs:isDefinedBy hcare: ;
       rdfs:range fea:Program ;
@@ -834,7 +845,7 @@ hcare:enrollsIn
               hcare:enrolledIn .
 
 hcare:fhid
-      rdf:type rdf:Property , drm:Attribute ;
+      rdf:type drm:Attribute , rdf:Property ;
       rdfs:comment "hcare:fhid is an rdf:Property and drm:Attribute that links/relates a hcare:Beneficiary (and subclasses) URI to thier Federal Health ID (FHID) URI. "^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "federal healthcare identifier"^^xsd:string ;
@@ -843,7 +854,7 @@ hcare:fhid
       drm:name "federal healthcare identifier"^^xsd:string .
 
 hcare:gender
-      rdf:type drm:Attribute , rdf:Property ;
+      rdf:type rdf:Property , drm:Attribute ;
       rdfs:comment "hcare:gender is an rdf:Property and drm:Attribute that links/relates a hcare:Beneficiary URI (and subclasses) to Gender URIs."^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "gender"^^xsd:string ;
@@ -851,7 +862,7 @@ hcare:gender
       drm:name "gender"^^xsd:string .
 
 hcare:ibc
-      rdf:type drm:Attribute , rdf:Property ;
+      rdf:type rdf:Property , drm:Attribute ;
       rdfs:comment "This is the definition of the hcare:ibc (inpatient beneficiary count) as a rdf:type rdf:Property and drm:Attribute that is drm:constrainedBy gd:integer which is a rdf:type xsd:integer. "^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "inpatient beneficiary count"^^xsd:string ;
@@ -860,7 +871,7 @@ hcare:ibc
       drm:name "inpatient beneficiary count"^^xsd:string .
 
 hcare:icrc
-      rdf:type drm:Attribute , rdf:Property ;
+      rdf:type rdf:Property , drm:Attribute ;
       rdfs:comment "This is the definition of the hcare:icrc (inpatient claim record count) as a rdf:type rdf:Property and drm:Attribute that is drm:constrainedBy gd:integer which is a rdf:type xsd:integer. "^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "inpatient claim record count"^^xsd:string ;
@@ -869,7 +880,7 @@ hcare:icrc
       drm:name "inpatient claim record count"^^xsd:string .
 
 hcare:ltcbc
-      rdf:type drm:Attribute , rdf:Property ;
+      rdf:type rdf:Property , drm:Attribute ;
       rdfs:comment "This is the definition of the hcare:ltcbc (long term care beneficiary count) as a rdf:type rdf:Property and drm:Attribute that is drm:constrainedBy gd:integer which is a rdf:type xsd:integer. "^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "long term care beneficiary count"^^xsd:string ;
@@ -878,7 +889,7 @@ hcare:ltcbc
       drm:name "long term care beneficiary count"^^xsd:string .
 
 hcare:ltccrc
-      rdf:type drm:Attribute , rdf:Property ;
+      rdf:type rdf:Property , drm:Attribute ;
       rdfs:comment "This is the definition of the hcare:ltccrc (long term care claim record count) as a rdf:type rdf:Property and drm:Attribute that is drm:constrainedBy gd:integer which is a rdf:type xsd:integer. "^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "long term care claim record count"^^xsd:string ;
@@ -887,7 +898,7 @@ hcare:ltccrc
       drm:name "long term care claim record count"^^xsd:string .
 
 hcare:medicaidBeneficiary
-      rdf:type drm:Attribute , rdf:Property ;
+      rdf:type rdf:Property , drm:Attribute ;
       rdfs:comment "hcare:medicaidBeneficiary is an rdf:Property that will link to an instance of a hcare:MedicaidBeneficiary URI "^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "medicaid beneficiary"^^xsd:string ;
@@ -896,7 +907,7 @@ hcare:medicaidBeneficiary
       drm:name "medicaid beneficiary"^^xsd:string .
 
 hcare:medicaidClaim
-      rdf:type drm:Attribute , rdf:Property ;
+      rdf:type rdf:Property , drm:Attribute ;
       rdfs:comment "hcare:medicaidClaim is an rdf:Property that will link to an instance of a hcare:MedicaidClaim URI"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "medicaid claim"^^xsd:string ;
@@ -905,7 +916,7 @@ hcare:medicaidClaim
       drm:name "medicaid claim"^^xsd:string .
 
 hcare:medicaidProvider
-      rdf:type drm:Attribute , rdf:Property ;
+      rdf:type rdf:Property , drm:Attribute ;
       rdfs:comment "hcare:medicaidProvider is a drm:Attribute and rdf:Property that will link to an instance of a hcare:MedicaidProvider URI"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "medicaid provider"^^xsd:string ;
@@ -914,7 +925,7 @@ hcare:medicaidProvider
       drm:name "medicaid provider"^^xsd:string .
 
 hcare:medicareBeneficiary
-      rdf:type drm:Attribute , rdf:Property ;
+      rdf:type rdf:Property , drm:Attribute ;
       rdfs:comment "hcare:medicareBeneficiary is an rdf:Property that will link to an instance of a hcare:MedicaidBeneficiary URI"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "medicare beneficiary"^^xsd:string ;
@@ -923,7 +934,7 @@ hcare:medicareBeneficiary
       drm:name "medicare beneficiary"^^xsd:string .
 
 hcare:medicareClaim
-      rdf:type drm:Attribute , rdf:Property ;
+      rdf:type rdf:Property , drm:Attribute ;
       rdfs:comment "hcare:medicareClaim is an rdf:Property that will link to an instance of a hcare:MedicareClaim URI"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "medicare claim"^^xsd:string ;
@@ -931,14 +942,14 @@ hcare:medicareClaim
       drm:name "medicare claim"^^xsd:string .
 
 hcare:noRelationship
-      rdf:type rdf:Property , drm:Relationship ;
+      rdf:type drm:Relationship , rdf:Property ;
       rdfs:comment "The definition of the hcare:NoRelationship class, which is a rdf:type drm:Relationship. This class exists to point out where Relationships between drm:Entity(s) should be further specified."^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "no relationship"^^xsd:string ;
       drm:name "No Relationship"^^xsd:string .
 
 hcare:npid
-      rdf:type drm:Attribute , rdf:Property ;
+      rdf:type rdf:Property , drm:Attribute ;
       rdfs:comment "hcare:npid is a drm:Attribute and rdf:Property that is drm:constrainedBy drm:DataType gd:URI that will link to an instance of a hcare:NationalProvider URI"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "national provider identifier"^^xsd:string ;
@@ -947,7 +958,7 @@ hcare:npid
       drm:name "national provider identifier"^^xsd:string .
 
 hcare:nursingFacilityDays
-      rdf:type rdf:Property , drm:Attribute ;
+      rdf:type drm:Attribute , rdf:Property ;
       rdfs:comment "nursing facility days"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "nursing facility days"^^xsd:string ;
@@ -955,14 +966,14 @@ hcare:nursingFacilityDays
       drm:name "nursing facility days"^^xsd:string .
 
 hcare:obc
-      rdf:type drm:Attribute , rdf:Property ;
+      rdf:type rdf:Property , drm:Attribute ;
       rdfs:comment "This is the definition of the hcare:obc (outpatient beneficiary count) as a rdf:type rdf:Property and drm:Attribute that is drm:constrainedBy gd:integer which is a rdf:type xsd:integer. "^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "outpatient beneficiary count"^^xsd:string ;
       rdfs:subPropertyOf hcare:beneficiaryCount .
 
 hcare:ocrc
-      rdf:type drm:Attribute , rdf:Property ;
+      rdf:type rdf:Property , drm:Attribute ;
       rdfs:comment "This is the definition of the hcare:ocrc (outpatient claim record count) as a rdf:type rdf:Property and drm:Attribute that is drm:constrainedBy gd:integer which is a rdf:type xsd:integer. "^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "outpatient claim record count"^^xsd:string ;
@@ -970,13 +981,13 @@ hcare:ocrc
       drm:name "outpatient claim record count"^^xsd:string .
 
 hcare:offers
-      rdf:type drm:Relationship , rdf:Property ;
+      rdf:type rdf:Property , drm:Relationship ;
       rdfs:comment "hcare:offers is an rdf:Property  and drm:Relationship that links/relates an instance of a hcare:Provider and/or fea:Program to a bmm:Offering or one of it's rdfs:subClassOf subclasses, such as hcare:Service or it's subclasses like hcare:LTCService. "^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "offers"^^xsd:string ;
       drm:destination hcare:Service ;
       drm:name "offers"^^xsd:string ;
-      drm:origin <http://health.data.gov/id/program/Medicaid> , <http://health.data.gov/id/program/Medicare> .
+      drm:origin <http://health.data.gov/id/program/Medicare> , <http://health.data.gov/id/program/Medicaid> .
 
 hcare:offersMedicaidService
       rdf:type rdf:Property , drm:Relationship ;
@@ -994,7 +1005,7 @@ hcare:offersMedicareService
       rdfs:isDefinedBy hcare: ;
       rdfs:label "offersMedicareService"^^xsd:string ;
       rdfs:subPropertyOf hcare:offersService ;
-      drm:destination hcare:MedicareInpatientDiagnosisService , hcare:MedicareLongTermCareService , hcare:MedicareOutpatientConsultingService , hcare:MedicarePharmacyService , hcare:MedicareInpatientProcedureService ;
+      drm:destination hcare:MedicareInpatientDiagnosisService , hcare:MedicareLongTermCareService , hcare:MedicareOutpatientConsultingService , hcare:MedicareInpatientProcedureService , hcare:MedicarePharmacyService ;
       drm:name "offers"^^xsd:string ;
       drm:origin hcare:MedicareProvider .
 
@@ -1009,7 +1020,7 @@ hcare:offersService
       drm:origin hcare:Provider .
 
 hcare:patientLiabilityAmount
-      rdf:type rdf:Property , drm:Attribute ;
+      rdf:type drm:Attribute , rdf:Property ;
       rdfs:comment "patient liability amount"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "patient liability amount"^^xsd:string ;
@@ -1018,14 +1029,14 @@ hcare:patientLiabilityAmount
       drm:name "patient liability amount"^^xsd:string .
 
 hcare:pbc
-      rdf:type drm:Attribute , rdf:Property ;
+      rdf:type rdf:Property , drm:Attribute ;
       rdfs:comment "This is the definition of the hcare:pbc (pharmacy beneficiary count ) as a rdf:type rdf:Property and drm:Attribute that is drm:constrainedBy gd:integer which is a rdf:type xsd:integer. "^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "pharmacy beneficiary count"^^xsd:string ;
       rdfs:subPropertyOf hcare:beneficiaryCount .
 
 hcare:pcrc
-      rdf:type drm:Attribute , rdf:Property ;
+      rdf:type rdf:Property , drm:Attribute ;
       rdfs:comment "This is the definition of the hcare:pcrc (pharmacy claim record count) as a rdf:type rdf:Property and drm:Attribute that is drm:constrainedBy gd:integer which is a rdf:type xsd:integer. "^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "pharmacy claim record count"^^xsd:string ;
@@ -1034,14 +1045,14 @@ hcare:pcrc
       drm:name "pharmacy claim record count"^^xsd:string .
 
 hcare:prescribedDate
-      rdf:type rdf:Property , drm:Attribute ;
+      rdf:type drm:Attribute , rdf:Property ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "prescribed date"^^xsd:string ;
       drm:constrainedBy <http://reference.data.gov/def/govdata/dateTime> ;
       drm:name "prescribed date"^^xsd:string .
 
 hcare:prescribingPhysician
-      rdf:type rdf:Property , drm:Attribute ;
+      rdf:type drm:Attribute , rdf:Property ;
       rdfs:comment "hcare:prescribingPhysician is a drm:Attribute and rdf:Property that will link to an instance of a hcare:Physician URI"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "prescribing physician"^^xsd:string ;
@@ -1050,14 +1061,14 @@ hcare:prescribingPhysician
       drm:name "prescribing physician"^^xsd:string .
 
 hcare:prescriptionFillDate
-      rdf:type rdf:Property , drm:Attribute ;
+      rdf:type drm:Attribute , rdf:Property ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "prescription fill date"^^xsd:string ;
       drm:constrainedBy <http://reference.data.gov/def/govdata/dateTime> ;
       drm:name "prescription fill date"^^xsd:string .
 
 hcare:procedureCode
-      rdf:type drm:Attribute , rdf:Property ;
+      rdf:type rdf:Property , drm:Attribute ;
       rdfs:comment "hcare:procedureCode is a rdf:type rdf:Property, drm:Attribute and rdfs:subPropertyOf hcare:code"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "procedure code"^^xsd:string ;
@@ -1066,7 +1077,7 @@ hcare:procedureCode
       drm:name "procedure code"^^xsd:string .
 
 hcare:provider
-      rdf:type drm:Attribute , rdf:Property ;
+      rdf:type rdf:Property , drm:Attribute ;
       rdfs:comment "hcare:provider is a drm:Attribute and rdf:Property that will link to an instance of a hcare:Provider URI or one of it's subclasses, such as hcare:MedicaidProvider or hcare:MedicareProvider"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "healthcare provider"^^xsd:string ;
@@ -1074,7 +1085,7 @@ hcare:provider
       drm:name "healthcare provider"^^xsd:string .
 
 hcare:providerAddress
-      rdf:type rdf:Property , drm:Attribute ;
+      rdf:type drm:Attribute , rdf:Property ;
       rdfs:comment "hcare:providerAddress is a drm:Attribute and rdf:Property and rdfs:subPropertyOf hcare:provider that will link to an instance of a gd:string contain a street address string"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "provider address"^^xsd:string ;
@@ -1083,7 +1094,7 @@ hcare:providerAddress
       drm:name "provider address"^^xsd:string .
 
 hcare:providerName
-      rdf:type drm:Attribute , rdf:Property ;
+      rdf:type rdf:Property , drm:Attribute ;
       rdfs:comment "hcare:providerName is a drm:Attribute and rdf:Property whose target object is a gd:string (which is a rdfs:PlainLiteral)"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "provider name"^^xsd:string ;
@@ -1092,7 +1103,7 @@ hcare:providerName
       drm:name "provider name"^^xsd:string .
 
 hcare:providerType
-      rdf:type drm:Attribute , rdf:Property ;
+      rdf:type rdf:Property , drm:Attribute ;
       rdfs:comment "hcare:providerType is a drm:Attribute and rdf:Property whose target object is a gd:URI"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "provider type"^^xsd:string ;
@@ -1101,7 +1112,7 @@ hcare:providerType
       drm:name "provider type"^^xsd:string .
 
 hcare:providerZipCode
-      rdf:type rdf:Property , drm:Attribute ;
+      rdf:type drm:Attribute , rdf:Property ;
       rdfs:comment """hcare:providerZipCode is a drm:Attribute and rdf:Property and rdfs:subPropertyOf hcare:provider that will link to an instance of a gd:string that will hold a zipcode string. 
 
 Note the existence of the hcare:vcard property for things in this properties Domain - here you'll find reuse of the W3C VCard ontology, which already contains standard reusable properties for things like zipcode."""^^xsd:string ;
@@ -1112,7 +1123,7 @@ Note the existence of the hcare:vcard property for things in this properties Dom
       drm:name "provider address"^^xsd:string .
 
 hcare:raceCode
-      rdf:type drm:Attribute , rdf:Property ;
+      rdf:type rdf:Property , drm:Attribute ;
       rdfs:comment "hcare:raceCode is a rdf:type rdf:Property, drm:Attribute and rdfs:subPropertyOf hcare:code"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "race code"^^xsd:string ;
@@ -1121,7 +1132,7 @@ hcare:raceCode
       drm:name "race code"^^xsd:string .
 
 hcare:record
-      rdf:type drm:Attribute , rdf:Property ;
+      rdf:type rdf:Property , drm:Attribute ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "healthcare record"^^xsd:string ;
       rdfs:range hcare:Record ;
@@ -1130,7 +1141,7 @@ hcare:record
       drm:name "healthcare record"^^xsd:string .
 
 hcare:recordset
-      rdf:type drm:Attribute , rdf:Property ;
+      rdf:type rdf:Property , drm:Attribute ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "healthcare recordset"^^xsd:string ;
       rdfs:range hcare:RecordSet ;
@@ -1139,7 +1150,7 @@ hcare:recordset
       drm:name "healthcare recordset"^^xsd:string .
 
 hcare:serviceBeginDate
-      rdf:type rdf:Property , drm:Attribute ;
+      rdf:type drm:Attribute , rdf:Property ;
       rdfs:comment "service begin date"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "service begin date"^^xsd:string ;
@@ -1147,7 +1158,7 @@ hcare:serviceBeginDate
       drm:name "service begin date"^^xsd:string .
 
 hcare:serviceEndDate
-      rdf:type rdf:Property , drm:Attribute ;
+      rdf:type drm:Attribute , rdf:Property ;
       rdfs:comment "service end date"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "service end date"^^xsd:string ;
@@ -1155,7 +1166,7 @@ hcare:serviceEndDate
       drm:name "service end date"^^xsd:string .
 
 hcare:serviceQuantity
-      rdf:type rdf:Property , drm:Attribute ;
+      rdf:type drm:Attribute , rdf:Property ;
       rdfs:comment "service quantity"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "service quantity"^^xsd:string ;
@@ -1163,7 +1174,7 @@ hcare:serviceQuantity
       drm:name "service quantity"^^xsd:string .
 
 hcare:supplyQuantity
-      rdf:type rdf:Property , drm:Attribute ;
+      rdf:type drm:Attribute , rdf:Property ;
       rdfs:comment "supply quantity"^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "supply quantity"^^xsd:string ;
@@ -1171,7 +1182,7 @@ hcare:supplyQuantity
       drm:name "supply quantity"^^xsd:string .
 
 hcare:tcrc
-      rdf:type drm:Attribute , rdf:Property ;
+      rdf:type rdf:Property , drm:Attribute ;
       rdfs:comment "This is the definition of the hcare:tcrc (total claim record count) as a rdf:type rdf:Property and drm:Attribute that is drm:constrainedBy gd:integer which is a rdf:type xsd:integer. "^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "total claim record count"^^xsd:string ;
@@ -1180,7 +1191,7 @@ hcare:tcrc
       drm:name "total claim record count"^^xsd:string .
 
 hcare:vcard
-      rdf:type drm:Attribute , rdf:Property ;
+      rdf:type rdf:Property , drm:Attribute ;
       rdfs:comment "hcare:vcard is a drm:Attribute and rdf:Property that will link to an instance of a vcard:VCard URI "^^xsd:string ;
       rdfs:isDefinedBy hcare: ;
       rdfs:label "vcard"^^xsd:string ;
@@ -1224,20 +1235,20 @@ hcare:vcard
       rdf:type drm:Topic .
 
 <http://reference.data.gov/def/govdata/URI>
-      rdf:type dcterms:URI , drm:DataType ;
+      rdf:type drm:DataType , dcterms:URI ;
       rdfs:isDefinedBy <http://reference.data.gov/def/govdata/> ;
       rdfs:label "URI"^^xsd:string ;
       drm:name "URI"^^xsd:string .
 
 <http://reference.data.gov/def/govdata/amount>
-      rdf:type xsd:decimal , drm:DataType ;
+      rdf:type drm:DataType , xsd:decimal ;
       rdfs:comment "gd:amount is a drm:DataType and xsd:decimal - but probably should be expressed as a unit of some monetary scheme (perhaps using qudt) - in this case USD."^^xsd:string ;
       rdfs:isDefinedBy <http://reference.data.gov/def/govdata/> ;
       rdfs:label "amount"^^xsd:string ;
       drm:name "amount"^^xsd:string .
 
 <http://reference.data.gov/def/govdata/dateTime>
-      rdf:type xsd:dateTime , drm:DataType ;
+      rdf:type drm:DataType , xsd:dateTime ;
       rdfs:comment "gd:dateTime is a rdf:type drm:DataType and xsd:dateTime"^^xsd:string ;
       rdfs:isDefinedBy <http://reference.data.gov/def/govdata/> ;
       rdfs:label "gd:dateTime"^^xsd:string ;
@@ -1250,14 +1261,14 @@ hcare:vcard
       drm:name "decimal"^^xsd:string .
 
 <http://reference.data.gov/def/govdata/integer>
-      rdf:type xsd:integer , drm:DataType ;
+      rdf:type drm:DataType , xsd:integer ;
       rdfs:comment "gd:integer is a rdf:type drm:DataType and xsd:integer"^^xsd:string ;
       rdfs:isDefinedBy <http://reference.data.gov/def/govdata/> ;
       rdfs:label "integer (xsd:integer)"^^xsd:string ;
       drm:name "integer (xsd:integer)"^^xsd:string .
 
 <http://reference.data.gov/def/govdata/resource>
-      rdf:type rdfs:Resource , drm:DataType ;
+      rdf:type drm:DataType , rdfs:Resource ;
       rdfs:isDefinedBy <http://reference.data.gov/def/govdata/> ;
       drm:name "resource"^^xsd:string .
 
