@@ -1,0 +1,123 @@
+# baseURI: http://vocab.data.gov/ess
+# imports: http://ebiquity.umbc.edu/ontologies/itso/1.0/itso.owl
+# imports: http://purl.org/dc/elements/1.1/
+# imports: http://vocab.govgoals.org/vcso/omg/bmm/bmm.owl
+# imports: http://www.w3.org/ns/org#
+
+@prefix bmm:     <http://ontologies.socialdataweb.org/vcso/omg/bmm/bmm.owl#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix ess:     <http://vocab.data.gov/ess#> .
+@prefix itso:    <http://www.owl-ontologies.com/Ontology1254285514.owl#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://vocab.data.gov/ess>
+      rdf:type owl:Ontology ;
+      owl:imports <http://ebiquity.umbc.edu/ontologies/itso/1.0/itso.owl> , <http://www.w3.org/ns/org#> , <http://vocab.govgoals.org/vcso/omg/bmm/bmm.owl> , dc: ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
+
+ess:ESS
+      rdf:type skos:ConceptScheme ;
+      rdfs:label "Enterprise Shared Service - SKOS Concept Scheme"^^xsd:string ;
+      skos:prefLabel "Enterprise Shared Service - SKOS Concept Scheme"^^xsd:string .
+
+ess:EnterpriseSharedService
+      rdf:type skos:Concept , rdfs:Class ;
+      rdfs:comment "Allows a support function that is provided by one business unit to be consumed by another business units."^^xsd:string ;
+      rdfs:label "Enterprise Shared Service"^^xsd:string ;
+      dc:description "Allows a support function that is provided by one business unit to be consumed by another business units."^^xsd:string ;
+      skos:inScheme ess:ESS ;
+      skos:prefLabel "Enterprise Shared Service"^^xsd:string ;
+      skos:topConceptOf ess:ESS .
+
+ess:LifecycleType
+      rdf:type skos:Concept , rdfs:Class ;
+      rdfs:comment "Examples for this property will be provided at a future date"^^xsd:string ;
+      rdfs:label "Lifecycle Type"^^xsd:string ;
+      dc:description "Examples for this property will be provided at a future date"^^xsd:string ;
+      skos:inScheme ess:ESS ;
+      skos:prefLabel "Lifecycle Type"^^xsd:string .
+
+ess:Model
+      rdf:type skos:Concept , rdfs:Class ;
+      rdfs:comment "Examples for this property will be provided at a future date"^^xsd:string ;
+      rdfs:label "Lifecycle Type"^^xsd:string ;
+      dc:description "Examples for this property will be provided at a future date"^^xsd:string ;
+      skos:inScheme ess:ESS ;
+      skos:prefLabel "Lifecycle Type"^^xsd:string .
+
+ess:cost
+      rdf:type rdf:Property ;
+      rdfs:comment "create subPropertyOf this property for specific kinds of costs; standard, optional, etc."^^xsd:string ;
+      rdfs:domain ess:EnterpriseSharedService ;
+      rdfs:label "cost"^^xsd:string ;
+      rdfs:range xsd:string ;
+      dc:description "cost"^^xsd:string ;
+      skos:prefLabel "cost"^^xsd:string .
+
+ess:costModel
+      rdf:type rdf:Property ;
+      rdfs:comment "Examples for this property will be provided at a future date"^^xsd:string ;
+      rdfs:domain ess:EnterpriseSharedService ;
+      rdfs:label "cost model"^^xsd:string ;
+      rdfs:range xsd:string ;
+      rdfs:subPropertyOf ess:model ;
+      dc:description "Examples for this property will be provided at a future date"^^xsd:string ;
+      skos:prefLabel "cost model"^^xsd:string .
+
+ess:feature
+      rdf:type rdf:Property ;
+      rdfs:comment "Describe the main features or benefits to the customers."^^xsd:string ;
+      rdfs:domain ess:EnterpriseSharedService ;
+      rdfs:label "standard features"^^xsd:string ;
+      rdfs:range xsd:string ;
+      dc:description "Describe the main features or benefits to the customers."^^xsd:string ;
+      skos:prefLabel "lifecycle type"^^xsd:string .
+
+ess:lifecycleType
+      rdf:type rdf:Property ;
+      rdfs:comment "Examples for this property will be provided at a future date"^^xsd:string ;
+      rdfs:domain ess:EnterpriseSharedService ;
+      rdfs:label "lifecycle type"^^xsd:string ;
+      rdfs:range ess:LifecycleType ;
+      dc:description "Examples for this property will be provided at a future date"^^xsd:string ;
+      skos:prefLabel "lifecycle type"^^xsd:string .
+
+ess:model
+      rdf:type rdf:Property ;
+      rdfs:comment "create subPropertyOf this property for specific kinds of models; cost, arch, etc."^^xsd:string ;
+      rdfs:domain ess:EnterpriseSharedService ;
+      rdfs:label "model"^^xsd:string ;
+      rdfs:range xsd:string ;
+      dc:description "a model of ..."^^xsd:string ;
+      skos:prefLabel "model"^^xsd:string .
+
+ess:optionalFeature
+      rdf:type rdf:Property ;
+      rdfs:comment "Add any additional features or benefits available to the customers not included in the base cost"^^xsd:string ;
+      rdfs:domain ess:EnterpriseSharedService ;
+      rdfs:label "optional feature"^^xsd:string ;
+      rdfs:range xsd:string ;
+      rdfs:subPropertyOf ess:feature ;
+      dc:description "Add any additional features or benefits available to the customers not included in the base cost"^^xsd:string ;
+      skos:prefLabel "optional feature"^^xsd:string .
+
+ess:standardCost
+      rdf:type rdf:Property ;
+      rdfs:comment "these are really CPIC concepts, so should be pulling in SKOS and/or RDFS/OWL representation of CPIC Concepts from OMG MPG - todo."^^xsd:string ;
+      rdfs:label "standard cost"^^xsd:string ;
+      rdfs:subPropertyOf ess:cost ;
+      dc:description "standard cost in accordance with standard features"^^xsd:string .
+
+ess:standardFeature
+      rdf:type rdf:Property ;
+      rdfs:comment "Describe the main features or benefits to the customers."^^xsd:string ;
+      rdfs:domain ess:EnterpriseSharedService ;
+      rdfs:label "standard feature"^^xsd:string ;
+      rdfs:range xsd:string ;
+      rdfs:subPropertyOf ess:feature ;
+      dc:description "Describe the main features or benefits to the customers."^^xsd:string ;
+      skos:prefLabel "standard feature"^^xsd:string .
