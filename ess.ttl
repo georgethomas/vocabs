@@ -117,6 +117,17 @@ ess:availability
   skos:inScheme ess:ESS ;
   skos:prefLabel "availability"^^xsd:string ;
 .
+ess:closed
+  rdf:type rdf:Property ;
+  dc:description "(Enter hours for the help desk availability) Help desk closing time"^^xsd:string ;
+  rdfs:comment "need to do this right, with interval spans using something like http://www.w3.org/TR/owl-time/ - todo"^^xsd:string ;
+  rdfs:domain ess:HelpDesk ;
+  rdfs:label "closed"^^xsd:string ;
+  rdfs:range xsd:time ;
+  rdfs:subPropertyOf ess:helpDeskInfo ;
+  skos:inScheme ess:ESS ;
+  skos:prefLabel "closed"^^xsd:string ;
+.
 ess:cost
   rdf:type rdf:Property ;
   dc:description "cost"^^xsd:string ;
@@ -187,6 +198,17 @@ ess:model
   rdfs:range ess:Model ;
   skos:inScheme ess:ESS ;
   skos:prefLabel "model"^^xsd:string ;
+.
+ess:open
+  rdf:type rdf:Property ;
+  dc:description "(Enter hours for the help desk availability) Help desk opening time"^^xsd:string ;
+  rdfs:comment "need to do this right, with interval spans using something like http://www.w3.org/TR/owl-time/ - todo"^^xsd:string ;
+  rdfs:domain ess:HelpDesk ;
+  rdfs:label "open"^^xsd:string ;
+  rdfs:range xsd:time ;
+  rdfs:subPropertyOf ess:helpDeskInfo ;
+  skos:inScheme ess:ESS ;
+  skos:prefLabel "open"^^xsd:string ;
 .
 ess:optionalCost
   rdf:type rdf:Property ;
