@@ -255,6 +255,16 @@ ess:serviceInvocationHelp
   skos:inScheme ess:ESS ;
   skos:prefLabel "help"^^xsd:string ;
 .
+ess:sla
+  rdf:type rdf:Property ;
+  dc:description "Service Level Agreement"^^xsd:string ;
+  rdfs:comment "Hyperlink to SLA if available or type “Contact provider for additional information” if not available"^^xsd:string ;
+  rdfs:domain ess:EnterpriseSharedService ;
+  rdfs:label "sla"^^xsd:string ;
+  rdfs:range itso:Service_Level_Agreement ;
+  skos:inScheme ess:ESS ;
+  skos:prefLabel "Service Level Agreement"^^xsd:string ;
+.
 ess:standardCost
   rdf:type rdf:Property ;
   dc:description "standard cost in accordance with standard features"^^xsd:string ;
